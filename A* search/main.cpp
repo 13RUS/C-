@@ -165,11 +165,14 @@ vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2
     return std::vector<vector<State>>{};
 }
 
-
 string CellString(State cell) {
     switch(cell) {
         case State::kObstacle: return "⛰️   ";
         case State::kPath: return "🚗   ";
+            // TODO: Add cases to return "🚦   " for kStart
+        case State::kStart: return "🚦   ";
+            // and "🏁   " for kFinish.
+        case State::kFinish: "🏁   ";
         default: return "0   ";
     }
 }
