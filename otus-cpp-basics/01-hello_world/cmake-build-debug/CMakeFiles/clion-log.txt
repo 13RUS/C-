@@ -1,0 +1,16 @@
+"/Users/alekseyleshchankin/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/alekseyleshchankin/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/ninja/mac/ninja" -G Ninja "/Users/alekseyleshchankin/Library/Mobile Documents/com~apple~CloudDocs/Code iCloud/otus-cpp-basics/01.hello_world"
+-- Configuring done
+CMake Error at CMakeLists.txt:5 (add_executable):
+  Cannot find source file:
+
+    hello_world.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+  .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+
+
+CMake Error at CMakeLists.txt:5 (add_executable):
+  No SOURCES given to target: hello_world
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
