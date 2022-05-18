@@ -1,2 +1,2 @@
 # C++ Code
-A*
+About code. Mostly on C++
