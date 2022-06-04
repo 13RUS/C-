@@ -10,7 +10,7 @@ public:
     Generic_container(){};
     virtual ~Generic_container(){};
 
-    //virtual void push_back (const T value);
+    //void push_back (const T value);
     //void insert (const T value, unsigned int index);
     //void erase (const unsigned int index);
     //void erase_three_values (const unsigned int index1, const unsigned int index2, const unsigned int index3);
