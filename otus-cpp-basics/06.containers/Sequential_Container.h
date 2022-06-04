@@ -21,7 +21,7 @@ public:
     T & operator [] (const unsigned int index);
 
     // additional methods
-    void erase_three_values (const unsigned int index1, const unsigned int index2, const unsigned int index3);
+    //void erase_three_values (const unsigned int index1, const unsigned int index2, const unsigned int index3);
     void print_container() const;
     void pop_back ();
     void clear ();
@@ -117,37 +117,6 @@ T & Sequential_Container<T>::operator[](const unsigned int index) {
 }
 
 // additional methods
-template <typename  T>
-void Sequential_Container<T>::erase_three_values(const unsigned int index1, const unsigned int index2,
-                                                 const unsigned int index3) {
-
-    T *new_buffer = new T[current_size-3];
-
-    unsigned int j=0;
-    for (unsigned int i = 0; i < index1-1; ++i) {
-        new_buffer[j] = buffer[i];
-        j++;
-    }
-
-    for (unsigned int i = index1; i < index2-1; ++i) {
-        new_buffer[j] = buffer[i];
-        j++;
-    }
-
-    for (unsigned int i = index2; i < index3-1; ++i) {
-        new_buffer[j] = buffer[i];
-        j++;
-    }
-
-    for (unsigned int i = index3; i <= current_size; ++i) {
-        new_buffer[j] = buffer[i];
-        j++;
-    }
-
-    delete[] buffer;
-    buffer = new_buffer;
-    current_size -=3;
-}
 
 template <typename T>
 void Sequential_Container<T>::print_container() const {

@@ -19,6 +19,22 @@ int main() {
 
     std::cout << "Container size: " << test_class_list.size() << std::endl;
 
+    std::cout << "Remove elements №№3, 5, 7  : ";
+    erase_position = 3;
+    test_class_list.erase (erase_position);
+    erase_position = 4;
+    test_class_list.erase (erase_position);
+    erase_position = 5;
+    test_class_list.erase (erase_position);
+    test_class_list.print_container();
+
+    erase_position = -33;
+    std::cout << "Remove from " << erase_position << " position   : ";
+    test_class_list.erase (erase_position);
+
+    std::cout << "Container elements         : ";
+    test_class_list.print_container();
+
     inserted_value = 10;
     inserted_position = 1;
     std::cout << "Insert " << inserted_value << " at the beginning : ";
@@ -36,17 +52,6 @@ int main() {
     test_class_list.print_container();
 
 
-    erase_position = 3;
-    std::cout << "Remove " << erase_position << " element           : ";
-    test_class_list.erase (erase_position);
-    test_class_list.print_container();
-
-    erase_position = -33;
-    std::cout << "Remove from " << erase_position << " position   : ";
-    test_class_list.erase (erase_position);
-
-    std::cout << "Container elements         : ";
-    test_class_list.print_container();
 
     extract_position = 7;
     std::cout << "Extract " << extract_position << " element using [] : " << test_class_list[extract_position] << std::endl;
@@ -64,6 +69,15 @@ int main() {
 
     std::cout << "Container size: " << test_class_sequential.size() << std::endl;
 
+    std::cout << "Remove elements №№3, 5, 7  : ";
+    erase_position = 3;
+    test_class_sequential.erase (erase_position);
+    erase_position = 4;
+    test_class_sequential.erase (erase_position);
+    erase_position = 5;
+    test_class_sequential.erase (erase_position);
+    test_class_sequential.print_container();
+
     inserted_value = 10;
     inserted_position = 1;
     std::cout << "Insert " << inserted_value << " at the beginning : ";
@@ -78,15 +92,6 @@ int main() {
     inserted_value = 30;
     std::cout << "Insert " << inserted_value << " at the end       : ";
     test_class_sequential.push_back(30);
-    test_class_sequential.print_container();
-
-    std::cout << "Remove elements №№3, 5, 7  : ";
-    test_class_sequential.erase_three_values(3,5,7);
-    test_class_sequential.print_container();
-
-    erase_position = 3;
-    std::cout << "Remove " << erase_position << " element           : ";
-    test_class_sequential.erase (erase_position);
     test_class_sequential.print_container();
 
     erase_position = -33;
