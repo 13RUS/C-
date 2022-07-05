@@ -20,5 +20,11 @@
 
 Требуется компиялтор с поддержкой C++17
 
+gtest устанавливался следующим образом:
+
+git clone https://github.com/google/googletest.git
+cmake ..-DCMAKE_INSTALL_PREFIX="/Users/alekseyleshchankin/Documents/otus-cpp-basics/otus-cpp-basics_m2_l13 (unit testing tools)/07.homework/prebuild_gtest"
+cmake .. -DGTEST_ROOT="/Users/alekseyleshchankin/Documents/otus-cpp-basics/otus-cpp-basics_m2_l13 (unit testing tools)/07.homework/prebuild_gtest"
+
 ## Пример работы
 ![](src/Picture1.png)
