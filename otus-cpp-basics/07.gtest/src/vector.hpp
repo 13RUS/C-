@@ -29,6 +29,10 @@ namespace homeworkspace {
             test_vector.insert(it, value);
         }
 
+        void push_front(const T& value) {
+            test_vector.insert(test_vector.begin(),value);
+        }
+
         void pop_back() {
             test_vector.pop_back();
         }
@@ -64,6 +68,12 @@ namespace homeworkspace {
         T& back() {
             return test_vector.back();
         }
+
+        T& operator[](const T& index)
+        {
+            return test_vector[index];
+        }
+
 
     private:
         std::vector<T, Allocator> test_vector;
