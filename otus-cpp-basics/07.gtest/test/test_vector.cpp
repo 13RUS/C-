@@ -28,7 +28,8 @@ TEST(VectorBasic, Size) {
     }
 
     // Assert
-    ASSERT_EQ((vector.size() == count), 1);
+    //ASSERT_EQ(vector.size(), count);
+    ASSERT_TRUE(vector.size() == count);
     }
 
 //--------- Insert Elements ---------
@@ -43,8 +44,9 @@ TEST(VectorInsert, PushBack) {
     }
 
     // Assert
-    ASSERT_EQ(vector.size(), count);
-    ASSERT_FALSE(vector.empty());
+    for (unsigned i = 0; i < count; ++i) {
+        EXPECT_EQ(vector[i],  i);
+    }
 }
 
 TEST(VectorInsert, PushFront) {
@@ -54,11 +56,13 @@ TEST(VectorInsert, PushFront) {
 
     // Act
     for (size_t i = 0; i < count; ++i) {
-        vector.push_back(i);
+        vector.push_front(i);
     }
 
+    vector.push_front(333);
+
     // Assert
-    ASSERT_EQ(vector.front(), 0u);
+    ASSERT_EQ(vector.front(), 333u);
     ASSERT_FALSE(vector.empty());
 }
 
@@ -94,13 +98,12 @@ TEST(VectorPop, PopBack) {
     }
 
     // Act
-    for (size_t i = 0; i < count; ++i) {
+    for (size_t i = 0; i < count-2; ++i) {
         vector.pop_back();
     }
 
     // Assert
-    ASSERT_EQ(vector.size(), 0u);
-    ASSERT_TRUE(vector.empty());
+    ASSERT_EQ(vector.back(), 1u);
 }
 
 TEST(VectorPop, PopFront) {
@@ -113,20 +116,18 @@ TEST(VectorPop, PopFront) {
     }
 
     // Act
-    for (size_t i = 0; i < count; ++i) {
+    for (size_t i = 0; i < count-2; ++i) {
         vector.pop_front();
     }
 
     // Assert
-    ASSERT_EQ(vector.size(), 0u);
-    ASSERT_TRUE(vector.empty());
+    ASSERT_EQ(vector.front(), 8u);
 }
 
 
 TEST(VectorPop, PopMiddle) {
     // Arrange
     const size_t count_test = 10;
-    bool middle_minus_one = 0, middle_plus_one=0;
     homeworkspace::Vector<size_t> vector;
 
     // Act
@@ -136,19 +137,15 @@ TEST(VectorPop, PopMiddle) {
 
     vector.pop_middle();
 
-    for (size_t i = 0; i < count_test/2 - 2; ++i) {
+    for (size_t i = 0; i + 2 < count_test/2; ++i) {
         vector.pop_front();
     }
 
-    if (vector.front() == 3) middle_minus_one = 1;
-
-    vector.pop_front();
-
-    if (vector.front() == 5) middle_plus_one = 1;
-
     // Assert
-    ASSERT_EQ(middle_minus_one &&  middle_plus_one, 1);
-    ASSERT_FALSE(vector.empty());
+    EXPECT_EQ(vector.front(), 3u);
+    vector.pop_front();
+    EXPECT_EQ(vector.front(), 5u);
+
 }
 
 TEST(VectorPopPush, PopPushComplex1) {
