@@ -116,7 +116,7 @@ TEST(VectorPop, PopFront) {
     }
 
     // Act
-    for (size_t i = 0; i < count-2; ++i) {
+    for (size_t i = 0; i + 2 < count; ++i) {
         vector.pop_front();
     }
 
@@ -145,7 +145,6 @@ TEST(VectorPop, PopMiddle) {
     EXPECT_EQ(vector.front(), 3u);
     vector.pop_front();
     EXPECT_EQ(vector.front(), 5u);
-
 }
 
 TEST(VectorPopPush, PopPushComplex1) {
