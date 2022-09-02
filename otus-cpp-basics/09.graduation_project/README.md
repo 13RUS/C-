@@ -72,4 +72,4 @@ Cmake.txt file content
 Требуется компилятор с поддержкой C++17
 
 ## Пример работы
-![](src/Picture1.png)
+https://youtu.be/QUYO5EKcvuA
