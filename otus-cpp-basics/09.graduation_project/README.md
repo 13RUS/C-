@@ -75,6 +75,7 @@ Cmake.txt file content
 https://youtu.be/QUYO5EKcvuA
 
 Определение углов доски:
+
 ![](src/Pic1.png)
 ![](src/Pic2.png)
 ![](src/Pic3.png)
