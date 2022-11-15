@@ -15,8 +15,8 @@
 Аппаратная среда:
 - Model Name:	MacBook Pro
 - Chip:	Apple M1 Pro
-- Total Number of Cores:	8 (6 performance and 2 efficiency)
-- Memory:	16 GB
+- Total Number of Cores:	10 (8 performance and 2 efficiency)
+- Memory:	32 GB
 
 ## Инструкция по сборке
 
