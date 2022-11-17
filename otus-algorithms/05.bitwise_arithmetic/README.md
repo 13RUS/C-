@@ -32,6 +32,6 @@
 ![](src/Pic1.png)![](src/Pic2.png)
 
 <p align="center">
-  <img src="src/King1.png" width="350" title="hover text">
-  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+  <img src="additional/King1.png" width="350">
+  <img src="additional/King2.png" width="350">
 </p>
