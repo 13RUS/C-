@@ -2,6 +2,8 @@
 // Created by Aleksey Leshchankin on 16.11.2022.
 //
 
+#pragma once
+
 // ---------------------------------------
 unsigned int CountingSingleBits1 (unsigned long bitmask) {
     unsigned int num_of_moves = 0;
