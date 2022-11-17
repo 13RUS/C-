@@ -7,7 +7,8 @@
 - короля (GetKingMoves.h);
 - ладьи (GetRookMoves.h);
 - коня (GetKnightMoves.h);
-- слона (GetBishopMoves.h)
+- слона (GetBishopMoves.h);
+- ферзя (GetQueenMoves.h)
 
 Также реализованы (файл CountingSingleBits.h): 
 - два алгоритма подсчёта единичных битов в числе;
