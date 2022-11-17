@@ -4,15 +4,13 @@
 #include "include/GetKnightMoves.h"
 #include "include/GetBishopMoves.h"
 #include "include/GetRookMoves.h"
+#include "include/GetQueenMoves.h"
 
 // ---------------------------------------
 int main() {
 
     unsigned int number_of_tests = 10;
     std::string path;
-
-    unsigned long position = 0;
-    //unsigned long bitmask = GetBishopMoves (position);
 
     std::cout << "\nKING TESTING" << std::endl;
     path = "../0.BITS/1.Bitboard - Король/";
@@ -30,11 +28,9 @@ int main() {
     path = "../0.BITS/4.Bitboard - Слон/";
     runtests_type(path, number_of_tests, GetBishopMoves);
 
-
-//    unsigned long bitmask = GetKingMoves (position);
-//    std::cout << "bitmask = " << bitmask << std::endl;
-//    num_of_moves = CountingSingleBits3(bitmask);
-//    std::cout << "num of moves = " << num_of_moves << std::endl;
-
+    std::cout << "\nQUEEN TESTING" << std::endl;
+    path = "../0.BITS/5.Bitboard - Ферзь/";
+    runtests_type(path, number_of_tests, GetQueenMoves);
+    
     return 0;
 }
