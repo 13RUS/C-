@@ -15,7 +15,7 @@
 ## Материалы по теме
 Автор материалов - очень крутой человек Волосатов Евгений https://habr.com/ru/users/FFormula/ 
 - [Статья Евгения](https://habr.com/ru/company/otus/blog/476510/)
-- [Очень полезная интерактивная тула] (https://gekomad.github.io/Cinnamon/BitboardCalculator/)
+- [Очень полезная интерактивная тула](https://gekomad.github.io/Cinnamon/BitboardCalculator/)
 
 ## Время работы алгоритма
 Аппаратная среда:
@@ -34,5 +34,4 @@
   <img src="additional/Rook.png"   style="width:256px; height:256px;">
   <img src="additional/Knight.png" style="width:256px; height:256px;">
   <img src="additional/Bishop.png" style="width:256px; height:256px;">
-
 </p>
