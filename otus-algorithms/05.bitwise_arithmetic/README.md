@@ -35,5 +35,5 @@
   <img src="additional/Rook.png"   style="width:256px; height:256px;">
   <img src="additional/Knight.png" style="width:256px; height:256px;">
   <img src="additional/Bishop.png" style="width:256px; height:256px;">
-
+  <img src="additional/Queen.png" style="width:256px; height:256px;">
 </p>
