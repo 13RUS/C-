@@ -9,7 +9,5 @@
 
 // ---------------------------------------
 unsigned long GetQueenMoves (unsigned int position) {
-    unsigned long bitmask = 0;
-    bitmask = bitmask | GetRookMoves(position) | GetBishopMoves(position);;
-    return bitmask;
+    return GetRookMoves(position) | GetBishopMoves(position);
 }
