@@ -15,7 +15,7 @@
 ## Материалы по теме
 Автор материалов - очень крутой человек Волосатов Евгений https://habr.com/ru/users/FFormula/ 
 - [Статья Евгения](https://habr.com/ru/company/otus/blog/476510/)
-- [Очень полезная интерактивная тула](https://gekomad.github.io/Cinnamon/BitboardCalculator/)
+- [Очень полезная интерактивная тула] (https://gekomad.github.io/Cinnamon/BitboardCalculator/)
 
 ## Время работы алгоритма
 Аппаратная среда:
@@ -29,9 +29,10 @@
 Требуется компиялтор с поддержкой C++17
 
 ## Результаты работы
-![](src/Pic1.png)![](src/Pic2.png)
+<p align="left">
+  <img src="additional/King.png"   style="width:256px; height:256px;">
+  <img src="additional/Rook.png"   style="width:256px; height:256px;">
+  <img src="additional/Knight.png" style="width:256px; height:256px;">
+  <img src="additional/Bishop.png" style="width:256px; height:256px;">
 
-<p align="center">
-  <img src="additional/King1.png" width="350">
-  <img src="additional/King2.png" width="350">
 </p>
