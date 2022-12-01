@@ -1,56 +1,48 @@
 #include <iostream>
 
+#include "include/FunctionsFile.h"
 #include "include/FunctionsEnablers.h"
+#include "include/FunctionsTesting.h"
 
-#include "include/CountingSort.h"
-#include "include/RadixSort.h"
-#include "include/BucketSort.h"
-
-// ---------------------------------------
-template <typename T>
-void TestingArray (const T& function_name) {
-
-    for (int i = 10; i<=1000000; i *= 10) {
-        int* ArrayToTest = new int[i];
-        GenerateArraysIncremental(ArrayToTest, i);
-
-        if (i==10) { std:: cout << "Validation:\n" << "Random Array: "; PrintArray(ArrayToTest, i); }
-
-        // ---------------------------------------
-        auto start = std::chrono::high_resolution_clock::now();
-
-        function_name(ArrayToTest, i);
-
-        auto end = std::chrono::high_resolution_clock::now();
-        auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-        // ---------------------------------------
-
-        if (i==10) { std:: cout << "Sorted Array: "; PrintArray(ArrayToTest, i); }
-        std::cout << "\nfor size = " << i << " time = " << elapsed_time.count();
-
-        delete [] ArrayToTest;
-    }
-}
+#include "include/QuickSort.h"
+#include "include/MergerSort.h"
 
 int main() {
 
-    std::cout << "\n// -------------- CountingSort -----------------------\n";
-    TestingArray (CountingSort);
+    std::string path;
+    std::string AlgorythmName;
+    path = "../sorting-tests/0.random/";
 
-    std::cout << "\n// -------------- RadixSort --------------------------\n";
-    TestingArray (RadixSort);
+/*  std::cout << "\n// -------------- QuickSort ----------------------- ";
+    RunCorrectnessTest(QuickSort, 1);
+    std::cout << "\n// -------------- MergerSort ---------------------- ";
+    RunCorrectnessTest(MergeSort, 2);
+*/
+    std::cout << "\n// -------------- QuickSort Random ------------------- ";
+    path = "../sorting-tests/0.random/";
+    RunCorrectnessTestFromFile(QuickSort, path, 1, 6, "QuickSort");
+    std::cout << "\n// -------------- QuickSort Digits ------------------- ";
+    path = "../sorting-tests/1.digits/";
+    RunCorrectnessTestFromFile(QuickSort, path, 1, 6, "QuickSort");
+    std::cout << "\n// -------------- QuickSort Sorted ------------------- ";
+    path = "../sorting-tests/2.sorted/";
+    RunCorrectnessTestFromFile(QuickSort, path, 1, 6, "QuickSort");
+    std::cout << "\n// -------------- QuickSort Revers ------------------- ";
+    path = "../sorting-tests/3.revers/";
+    RunCorrectnessTestFromFile(QuickSort, path, 1, 5, "QuickSort");
 
-    std::cout << "\n// -------------- BucketSort -------------------------\n";
-    TestingArray (BucketSort);
-
-//    int array [] =  {121, 564, 432, 23, 1, 45, 4};
-//    int n = sizeof(array) / sizeof(array[0]);
-//
-//    BucketSort(array, n);
-//
-//   // std::cout << "\n"; PrintArray(array, n);
-
-    //float arrayf[] = { 0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434 };
+    std::cout << "\n// -------------- MergeSort Random ------------------- ";
+    path = "../sorting-tests/0.random/";
+    RunCorrectnessTestFromFile(MergeSort, path, 1, 6, "MergeSort");
+    std::cout << "\n// -------------- MergeSort Digits ------------------- ";
+    path = "../sorting-tests/1.digits/";
+    RunCorrectnessTestFromFile(MergeSort, path, 1, 7, "MergeSort");
+    std::cout << "\n// -------------- MergeSort Sorted ------------------- ";
+    path = "../sorting-tests/2.sorted/";
+    RunCorrectnessTestFromFile(MergeSort, path, 1, 7, "MergeSort");
+    std::cout << "\n// -------------- MergeSort Revers ------------------- ";
+    path = "../sorting-tests/3.revers/";
+    RunCorrectnessTestFromFile(MergeSort, path, 1, 7, "MergeSort");
 
     return 0;
 }
