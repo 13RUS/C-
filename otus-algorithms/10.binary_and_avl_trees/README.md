@@ -15,7 +15,7 @@
   - малое левое (right right case) / правое (left left case) вращение
   - большое левое (right left case)/правое вращение (left right case) - реализованы через вызов малых вращений
 
-## Комментарии к алгоритмам:
+## Комментарии к алгоритмам
 <p align="left">
   <img src="additional/Rotational_cases.png" style="width:256px; height:256px;">
   <img src="additional/Rotational_algorithms.png" style="width:256px; height:256px;">
