@@ -10,6 +10,6 @@
 
 ## Результаты работы
 <p align="left">
-  <img src="" style="width:256px; height:256px;">
+  <img src="additional/Pic1.png" style="width:256px; height:256px;">
 
 </p>
