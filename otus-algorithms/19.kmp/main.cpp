@@ -70,8 +70,8 @@ int main() {
     string pattern  = "AABA";
 
     std::cout << "\n\n// ---------------- KMP Algorithm Testing --------------\n";
-    std::cout << "String: " << text << std::endl;
-    std::cout << "String: " << pattern << std::endl;
+    std::cout << "String:  " << text << std::endl;
+    std::cout << "Pattern: " << pattern << std::endl;
     KMPsearch(text,pattern);
 
     return 0;
